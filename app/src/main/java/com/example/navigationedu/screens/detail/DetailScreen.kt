@@ -11,14 +11,14 @@ import androidx.navigation.NavController
 @Composable
 fun DetailScreen(
     navController: NavController,
-    movie: String?,
+    book: String?,
     modifier: Modifier = Modifier){
     Column (
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Text(
-            text = movie!!
+            text = book!!
         )
     }
 }

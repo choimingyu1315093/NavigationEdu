@@ -1,6 +1,6 @@
 package com.example.navigationedu.navigation
 
-enum class MovieScreens {
+enum class BookScreens {
     HOMESCREEN,
     DETAILSCREEN;
 }

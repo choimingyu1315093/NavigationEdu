@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import com.example.navigationedu.navigation.MovieScreens
+import com.example.navigationedu.navigation.BookScreens
 
 @Composable
 fun HomeScreen(navController: NavController, modifier: Modifier = Modifier){
@@ -18,7 +18,7 @@ fun HomeScreen(navController: NavController, modifier: Modifier = Modifier){
     ){
         Button(
             onClick = {
-                navController.navigate(MovieScreens.DETAILSCREEN.name+"/Inception")
+                navController.navigate(BookScreens.DETAILSCREEN.name+"/어린왕자")
             }
         ) {
             Text(

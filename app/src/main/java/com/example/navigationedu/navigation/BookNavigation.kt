@@ -10,21 +10,22 @@ import com.example.navigationedu.screens.detail.DetailScreen
 import com.example.navigationedu.screens.home.HomeScreen
 
 @Composable
-fun MovieNavigation(){
+fun BookNavigation(){
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = MovieScreens.HOMESCREEN.name
+        startDestination = BookScreens.HOMESCREEN.name
     ) {
-        composable(route = MovieScreens.HOMESCREEN.name){
+        composable(route = BookScreens.HOMESCREEN.name){
             HomeScreen(navController = navController)
         }
 
         composable(
-            route = MovieScreens.DETAILSCREEN.name+"/{movie}",
-            arguments = listOf(navArgument("movie"){type = NavType.StringType})
+            route = BookScreens.DETAILSCREEN.name+"/{book}",
+            arguments = listOf(navArgument("book"){type = NavType.StringType})
         ){
-            DetailScreen(navController = navController, it.arguments?.getString("movie"))
+
+            DetailScreen(navController = navController, it.arguments?.getString("book"))
         }
     }
 }
